@@ -1,0 +1,46 @@
+<!doctype html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</script>
+<title>Bananagram!</title>
+<div class="wrapper">
+    <div class="header">
+        <span class="header">Bananagrams!</span>
+    </div>
+    <div class="content">
+        <form action="/find" method="post" class="add-entry">
+            <input type=text size=50 name="string" value="{{string}}">
+            <input type=submit value=Bananagram! style class="button">
+        </form>
+        {% if word_list %}
+        <span id="string" style="display:none;">{{string}}</span>
+            <ul class="sort-functions">
+                <li id="export-to-csv"><a href="/txt?string={{ string }}">export to txt</a></li>
+                <li id="export-to-xls"><a href="/xls?string={{ string }}">export to xls</a></li>
+            </ul>
+            <ul class="sort-functions">
+                <li id="alpha-asc">sort a-z</li>
+                <li id="alpha-desc"> sort z-a</li>
+                <li id="size-asc">smallest first</li>
+                <li id="size-desc"> biggest first</li>
+            </ul>
+        <span class="search-string">With the letters in
+            <strong>"{{ string }}"</strong> you could make the words:</span><br>
+        <div class="wordlist">
+            <ul class="wordlist">
+            {% for word in word_list %}
+                <li>{{ word }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% else %}
+            {% if string %}
+                Sorry! We can't find any words from your set of letters.
+            {% else %}
+                <span class="explanatory">How many words can you make from a set of letters?</span>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div class="clearfix">&nbsp;</div>
+</div>

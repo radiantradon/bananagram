@@ -1,0 +1,88 @@
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+li {
+	line-height: 1.5em;
+}
+
+a {
+	color: #000;
+}
+
+.add-entry {
+	float: left;
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.input-form {
+	display: block;
+}
+
+.wrapper {
+	width: 50%;
+	margin: auto;
+	background-color: #FFFEE8;
+}
+
+span.header {
+	font-size: 3em;
+	font-weight: bold;
+	font-family: 'Cooper Black';
+	vertical-align: middle;
+}
+
+div.header {
+	background-color: #F5CD00;
+	text-align: center;
+	line-height: 4.5em;
+}
+
+.content {
+	text-align: left;
+	padding-left: 40px;
+	font-family: "Lucida Sans", "Myriad Pro", "Helvetica", sans-serif;
+}
+
+.search-string, .sort-string {
+	font-size:1.2em;
+}
+
+input {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+input.button {
+	background-color: #F5CD00;
+	font-size: 18px;
+	color: black;
+	border: 0px;
+	font-weight: bold;
+	border-radius: 20px;
+}
+
+ul.sort-functions li:last-child {
+	float: none;
+}
+
+ul.sort-functions li {
+	float: left;
+	cursor: pointer;
+	padding-right: 15px;
+}
+
+.checked {
+	font-weight: bold;
+}
+
+.explanatory {
+	font-style: italic;
+	font-size: 14px;
+	color: #BBB;
+}
