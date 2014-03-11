@@ -8,5 +8,5 @@ from node import Node
 # We do this in __init__.py so that the word list will only have to regenerate
 # when the server restarts
 trie = Node()
-trie.fill(filename="1000.txt")
+trie.fill(filename="sun_dictionary.txt")
 
